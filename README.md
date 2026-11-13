@@ -43,7 +43,6 @@ When a check fails, the system repairs the answer or declines to give one.**
 - [Testing](#-testing)
 - [Limits](#-limits)
 - [Troubleshooting](#-troubleshooting)
-- [Author](#-author)
 
 ---
 
