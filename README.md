@@ -617,21 +617,3 @@ npm run build
 | Prose answers just quote the text | No model configured. Add a key or Ollama, then pick the provider in Settings |
 | Out of memory on a huge CSV | Set `SHRAG_DUCKDB_MEMORY=4GB` (or lower) before starting |
 | `pip install` is very slow | You installed `requirements-embeddings.txt` (PyTorch, ~1 GB). It is optional |
-
----
-
-## 👤 Author
-
-**Loganth P**, final-year B.E. Computer Science & Engineering, Vidyavardhaka College of Engineering, Mysuru.
-
-[![GitHub](https://img.shields.io/badge/GitHub-LoganthP-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LoganthP)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Loganth_P-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/loganth-p-158667280/)
-[![Email](https://img.shields.io/badge/Email-loganthp55%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:loganthp55@gmail.com)
-
-<div align="center">
-
-<img src="assets/divider.svg" alt="" width="100%"/>
-
-**If this project helps you, please give it a ⭐**
-
-</div>
