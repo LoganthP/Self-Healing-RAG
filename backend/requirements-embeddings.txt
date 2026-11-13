@@ -1,0 +1,3 @@
+# Optional: semantic search for prose documents with all-MiniLM-L6-v2 (adds PyTorch, ~1 GB).
+# Tables never need it. Without it, prose search uses BM25 only.
+sentence-transformers>=2.7

@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Sora", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #172038;
+  --color-muted: #5a6684;
+  --color-faint: #8a94ad;
+  --color-glacier: #eaf4fa;
+  --color-line: #d9e3ef;
+  --color-indigo: #4f46e5;
+  --color-indigo-soft: #e8e7fd;
+  --color-cyan: #0891b2;
+  --color-cyan-soft: #dff4f9;
+  --color-accepted: #059669;
+  --color-accepted-soft: #dcf5ec;
+  --color-healing: #c26a05;
+  --color-healing-soft: #fdf0db;
+  --color-withheld: #be185d;
+  --color-withheld-soft: #fce4ef;
+  --color-error: #dc2626;
+  --color-error-soft: #fde5e5;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-glacier);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Soft aurora behind the glass panels */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(40rem 30rem at 8% 10%, #c9f0fb 0%, transparent 60%),
+    radial-gradient(36rem 28rem at 92% 6%, #dcdcfd 0%, transparent 62%),
+    radial-gradient(42rem 30rem at 70% 96%, #d4f6e6 0%, transparent 60%),
+    radial-gradient(30rem 24rem at 20% 90%, #fdf1dc 0%, transparent 60%),
+    #eef6fb;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.64);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 14px 34px -16px rgba(31, 44, 94, 0.22);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.84);
+  -webkit-backdrop-filter: blur(22px) saturate(1.5);
+  backdrop-filter: blur(22px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    inset 0 1px 0 #fff,
+    0 18px 40px -18px rgba(31, 44, 94, 0.28);
+}
+
+.lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.lift:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 #fff,
+    0 22px 44px -18px rgba(31, 44, 94, 0.3);
+}
+
+.num {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-indigo);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.scroll-thin::-webkit-scrollbar { width: 8px; height: 8px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: #cfd9e7; border-radius: 99px; }
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.45); }
+  100% { box-shadow: 0 0 0 12px rgba(79, 70, 229, 0); }
+}
+.pulse-ring { animation: pulse-ring 1.2s ease-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* React Flow: keep the canvas transparent so the glass panel shows through */
+.react-flow__attribution { display: none; }
+.react-flow { background: transparent !important; }
