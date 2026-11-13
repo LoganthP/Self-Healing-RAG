@@ -19,7 +19,7 @@
 **Ask questions about your spreadsheets and documents. Every answer is checked against the data before you see it.
 When a check fails, the system repairs the answer or declines to give one.**
 
-[Quick Start](#-quick-start) · [How It Works](#-how-it-works) · [Architecture](#-architecture) · [Datasets](#-datasets-for-analysis) · [Configuration](#-configuration) · [Troubleshooting](#-troubleshooting)
+[Quick Start](#-quick-start) · [How It Works](#-how-it-works) · [Architecture](#-architecture) · [Datasets](#-datasets-for-analysis) · [Troubleshooting](#-troubleshooting)
 
 <img src="assets/divider.svg" alt="" width="100%"/>
 
