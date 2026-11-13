@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="10" viewBox="0 0 1200 10" role="presentation" aria-hidden="true">
+  <defs>
+    <linearGradient id="d" x1="0" x2="1"><stop offset="0" stop-color="#6366f1" stop-opacity="0"/><stop offset=".5" stop-color="#06b6d4"/><stop offset="1" stop-color="#6366f1" stop-opacity="0"/></linearGradient>
+    <style>.s{animation:sh 4s ease-in-out infinite;transform-origin:center}@keyframes sh{0%,100%{opacity:.5}50%{opacity:1}}@media (prefers-reduced-motion:reduce){.s{animation:none}}</style>
+  </defs>
+  <rect class="s" x="0" y="3" width="1200" height="4" rx="2" fill="url(#d)"/>
+</svg>

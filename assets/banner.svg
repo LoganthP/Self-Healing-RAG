@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="t d">
+  <title id="t">Self-Healing RAG</title>
+  <desc id="d">Animated banner: a question is retrieved, verified and, if a check fails, repaired before it is shown.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="0.55" stop-color="#312e81"/><stop offset="1" stop-color="#0e7490"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".35"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .title{font:800 54px 'Segoe UI',Arial,sans-serif;fill:#fff;letter-spacing:-1px}
+      .sub{font:500 20px 'Segoe UI',Arial,sans-serif;fill:#c7d2fe}
+      .tag{font:600 14px 'Segoe UI',Arial,sans-serif;fill:#e0f2fe}
+      .spin{transform-origin:1020px 160px;animation:spin 14s linear infinite}
+      .spin2{transform-origin:1020px 160px;animation:spin 22s linear infinite reverse}
+      .pulse{transform-origin:1020px 160px;animation:pulse 3.2s ease-in-out infinite}
+      .draw{stroke-dasharray:330;stroke-dashoffset:330;animation:draw 3.6s ease-in-out infinite}
+      .float{animation:float 5s ease-in-out infinite}
+      @keyframes spin{to{transform:rotate(360deg)}}
+      @keyframes pulse{0%,100%{transform:scale(.94);opacity:.7}50%{transform:scale(1.06);opacity:1}}
+      @keyframes draw{0%{stroke-dashoffset:330}55%,100%{stroke-dashoffset:0}}
+      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+      @media (prefers-reduced-motion:reduce){.spin,.spin2,.pulse,.draw,.float{animation:none;stroke-dashoffset:0}}
+    </style>
+  </defs>
+  <rect width="1200" height="320" rx="24" fill="url(#bg)"/>
+  <circle cx="1020" cy="160" r="150" fill="url(#glow)" class="pulse"/>
+  <g class="spin" fill="none" stroke="url(#ring)" stroke-width="3" stroke-dasharray="6 14" opacity=".8">
+    <circle cx="1020" cy="160" r="118"/>
+  </g>
+  <g class="spin2" fill="none" stroke="#67e8f9" stroke-width="2" stroke-dasharray="2 10" opacity=".7">
+    <circle cx="1020" cy="160" r="92"/>
+  </g>
+  <circle cx="1020" cy="160" r="62" fill="#0f172a" stroke="url(#ring)" stroke-width="4"/>
+  <path class="draw" d="M992 162 L1012 184 L1052 136" fill="none" stroke="#34d399" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <g class="float">
+    <text x="64" y="132" class="title">Self-Healing RAG</text>
+    <text x="66" y="176" class="sub">Autonomous retrieval, verification and answer correction.</text>
+    <text x="66" y="206" class="sub">Every answer is checked before you see it. Failures are repaired, or withheld.</text>
+  </g>
+  <g transform="translate(66 240)">
+    <rect width="118" height="32" rx="16" fill="#ffffff" fill-opacity=".14"/><text x="59" y="21" text-anchor="middle" class="tag">FastAPI</text>
+    <rect x="130" width="118" height="32" rx="16" fill="#ffffff" fill-opacity=".14"/><text x="189" y="21" text-anchor="middle" class="tag">DuckDB</text>
+    <rect x="260" width="118" height="32" rx="16" fill="#ffffff" fill-opacity=".14"/><text x="319" y="21" text-anchor="middle" class="tag">React 18</text>
+    <rect x="390" width="132" height="32" rx="16" fill="#ffffff" fill-opacity=".14"/><text x="456" y="21" text-anchor="middle" class="tag">React Flow</text>
+  </g>
+</svg>

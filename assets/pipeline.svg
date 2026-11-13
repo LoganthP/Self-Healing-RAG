@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="t d">
+  <title id="t">The self-healing loop</title>
+  <desc id="d">validate input, retrieve, grade relevance, generate, critique, then finalize. A failed critique loops back to rewrite the search or regenerate, or abstains.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/></linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6366f1"/></marker>
+    <marker id="r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#be185d"/></marker>
+    <style>
+      .n{fill:#fff;stroke:#c7d2fe;stroke-width:2}
+      .l{font:700 15px 'Segoe UI',Arial,sans-serif;fill:#1e1b4b;text-anchor:middle}
+      .s{font:500 11.5px 'Segoe UI',Arial,sans-serif;fill:#64748b;text-anchor:middle}
+      .flow{stroke:#6366f1;stroke-width:3;fill:none;stroke-dasharray:8 8;animation:dash 1.2s linear infinite}
+      .heal{stroke:#be185d;stroke-width:3;fill:none;stroke-dasharray:8 8;animation:dash 1.2s linear infinite reverse}
+      .ok{fill:#ecfdf5;stroke:#059669;stroke-width:2}
+      .bad{fill:#fdf2f8;stroke:#be185d;stroke-width:2}
+      .hl{animation:glow 6s ease-in-out infinite}
+      .hl:nth-of-type(2){animation-delay:1s}.hl:nth-of-type(3){animation-delay:2s}.hl:nth-of-type(4){animation-delay:3s}.hl:nth-of-type(5){animation-delay:4s}
+      @keyframes dash{to{stroke-dashoffset:-16}}
+      @keyframes glow{0%,100%{stroke:#c7d2fe}15%{stroke:#6366f1;stroke-width:4}30%{stroke:#c7d2fe}}
+      @media (prefers-reduced-motion:reduce){.flow,.heal,.hl{animation:none}}
+    </style>
+  </defs>
+  <g>
+    <rect class="n hl" x="20" y="40" width="150" height="64" rx="16"/><text class="l" x="95" y="68">Validate</text><text class="s" x="95" y="87">input check</text>
+    <rect class="n hl" x="215" y="40" width="150" height="64" rx="16"/><text class="l" x="290" y="68">Retrieve</text><text class="s" x="290" y="87">SQL · BM25 · MiniLM</text>
+    <rect class="n hl" x="410" y="40" width="150" height="64" rx="16"/><text class="l" x="485" y="68">Grade</text><text class="s" x="485" y="87">is evidence relevant?</text>
+    <rect class="n hl" x="605" y="40" width="150" height="64" rx="16"/><text class="l" x="680" y="68">Generate</text><text class="s" x="680" y="87">draft the answer</text>
+    <rect class="n hl" x="800" y="40" width="150" height="64" rx="16"/><text class="l" x="875" y="68">Critique</text><text class="s" x="875" y="87">independent recount</text>
+    <rect class="ok" x="1000" y="12" width="180" height="56" rx="16"/><text class="l" x="1090" y="38" style="fill:#047857">Finalize</text><text class="s" x="1090" y="56">verified answer</text>
+    <rect class="bad" x="1000" y="86" width="180" height="56" rx="16"/><text class="l" x="1090" y="112" style="fill:#9d174d">Abstain</text><text class="s" x="1090" y="130">withheld, not guessed</text>
+  </g>
+  <g>
+    <path class="flow" d="M170 72 H213" marker-end="url(#a)"/>
+    <path class="flow" d="M365 72 H408" marker-end="url(#a)"/>
+    <path class="flow" d="M560 72 H603" marker-end="url(#a)"/>
+    <path class="flow" d="M755 72 H798" marker-end="url(#a)"/>
+    <path class="flow" d="M950 60 L998 42" marker-end="url(#a)"/>
+    <path class="flow" d="M950 86 L998 110" marker-end="url(#r)" style="stroke:#be185d"/>
+  </g>
+  <g>
+    <path class="heal" d="M875 104 V190 H290 V106" marker-end="url(#r)"/>
+    <text class="s" x="580" y="184" style="fill:#be185d;font-weight:700">Rewrite search: repair targeted at the failure reason</text>
+    <path class="heal" d="M875 104 V150 H680 V106" marker-end="url(#r)" style="opacity:.75"/>
+    <text class="s" x="778" y="144" style="fill:#be185d">Regenerate from same evidence</text>
+  </g>
+  <text class="s" x="600" y="236" style="font-size:13px">Retries are bounded by the retrieval and regeneration budgets set in Settings.</text>
+</svg>
